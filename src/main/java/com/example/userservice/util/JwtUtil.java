@@ -20,7 +20,7 @@ public class JwtUtil {
     // і валідації токенів.
     // Важилво: у реальних додатках треба використовувати складніший
     // і безпечніший ключ.
-    private final String SECRET_KEY = "9ACFD5FCD6C7DDF2BED1F94588E4B";
+    private final String SECRET_KEY = "9ACFD5FCD6C7DDF2BED1F94588E4B9ACFD5FCD6C7DDF2BED1F94588E4B9ACFD5FCD6C7DDF2BED1F94588E4B";
     // Метод generateToken створює новий токен для заданого імені користувача
     // (username) і ролі (role).
     public String generateToken(String username, String role) {
