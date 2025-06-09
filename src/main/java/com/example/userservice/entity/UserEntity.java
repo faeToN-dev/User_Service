@@ -10,6 +10,11 @@ import lombok.*;
 // Позначення класу як сутності бази даних:
 // -- @Entity вказує, що цей клас є сутністю (entity) 
 // буде зіставлений з таблицею в базі даних.
+// Імпорт класу Serializable.
+import java.io.Serializable;
+// Serializable — це маркерний інтерфейс Java (інтерфейс без методів),
+// який дозволяє об'єкту бути перетвореним у потік байтів (серіалізація) та
+// відновленим назад у пам'яті (десеріалізація).
 @Entity
 // -- @Table(name = "users") — визначає назву таблиці в базі (users).
 // Якщо не вказати, назва таблиці буде такою ж, як назва класу (UserEntity).
@@ -25,7 +30,7 @@ import lombok.*;
 @AllArgsConstructor
 // Оголошення класу UserEntity, який описує структуру
 // таблиці users в базі даних.
-public class UserEntity {
+public class UserEntity implements Serializable {
     // Опис первинного ключа:
     // -- вказує поле id як первинний ключ (Primary Key).
     @Id
